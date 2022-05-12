@@ -1,0 +1,41 @@
+@use './designElement' as d;
+
+figure {
+    @include d.figure;
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+
+    img {
+        @include d.imageGenerall;
+        opacity: 0.7;
+        animation: moveImg 30s linear infinite alternate;
+    }
+}
+
+@keyframes moveImg {
+    0% {
+        opacity: 1;
+        transform: translate3d(0px) scale(1);
+    }
+    20% {
+        transform: translate3d(-300px) scale(1.5);
+        opacity: 0.7;
+    }
+    40% {
+        transform: translate3d(-300px) scale(1.8);
+        opacity: 0.2;
+    }
+    60% {
+        transform: translate3d(-300px) scale(1.8);
+        opacity: 0.2;
+    }
+    80%{
+        transform: translate3d(-300px) scale(1.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate3d(0px) scale(1);
+        opacity: 1;
+    }
+}

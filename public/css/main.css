@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(to bottom, black 70%, rgb(102, 1, 1) 85%, red);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+body:before {
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.containerCentral {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+  border-radius: 16px;
+  animation: change-color 5s alternate-reverse ease-in-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes spinRevert {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes change-color {
+  0% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+  10% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  20% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+  30% {
+    background: rgba(255, 255, 0, 0.3);
+  }
+  40% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+  50% {
+    background: rgba(0, 128, 0, 0.3);
+  }
+  60% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+  70% {
+    background: rgba(0, 0, 255, 0.3);
+  }
+  80% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+  90% {
+    background: rgba(149, 3, 142, 0.3);
+  }
+  100% {
+    background: rgba(149, 91, 3, 0.3);
+  }
+}
+@keyframes change-color2 {
+  0% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  10% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(255, 0, 0, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  20% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  30% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 0, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  40% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  50% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 15%, rgba(0, 128, 0, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  60% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  70% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(0, 0, 255, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  80% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  90% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 3, 142, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+  100% {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 15%, rgba(149, 91, 3, 0.3) 85%, rgba(255, 0, 0, 0.8));
+  }
+}
+@keyframes change-background {
+  0% {
+    background: url("../../assets/img/Carousel3/cImg1.jpg");
+    opacity: 1;
+  }
+  10% {
+    background: url("../../assets/img/Carousel3/cImg2.jpg");
+    opacity: 0.98;
+  }
+  20% {
+    background: url("../../assets/img/Carousel3/cImg3.jpg");
+    opacity: 0.96;
+  }
+  30% {
+    background: url("../../assets/img/Carousel3/cImg4.jpg");
+    opacity: 0.94;
+  }
+  40% {
+    background: url("../../assets/img/Carousel3/cImg5.jpg");
+    opacity: 0.92;
+  }
+  50% {
+    background: url("../../assets/img/Carousel3/cImg6.jpg");
+    opacity: 0.9;
+  }
+  60% {
+    background: url("../../assets/img/Carousel3/cImg7.jpg");
+    opacity: 0.92;
+  }
+  70% {
+    background: url("../../assets/img/Carousel3/cImg8.jpg");
+    opacity: 0.94;
+  }
+  80% {
+    background: url("../../assets/img/Carousel3/cImg9.jpg");
+    opacity: 0.96;
+  }
+  90% {
+    background: url("../../assets/img/Carousel3/cImg10.jpg");
+    opacity: 0.98;
+  }
+  100% {
+    background: url("../../assets/img/Carousel3/cImg11.jpg");
+    opacity: 1;
+  }
+}
+figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0% auto;
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+}
+figure img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  image-rendering: optimizeSpeed;
+  opacity: 0.7;
+  animation: moveImg 30s linear infinite alternate;
+}
+
+@keyframes moveImg {
+  0% {
+    opacity: 1;
+    transform: translate3d(0px) scale(1);
+  }
+  20% {
+    transform: translate3d(-300px) scale(1.5);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translate3d(-300px) scale(1.8);
+    opacity: 0.2;
+  }
+  60% {
+    transform: translate3d(-300px) scale(1.8);
+    opacity: 0.2;
+  }
+  80% {
+    transform: translate3d(-300px) scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0px) scale(1);
+    opacity: 1;
+  }
+}
+.scene {
+  position: relative;
+  display: block;
+  float: left;
+  position: relative;
+  vertical-align: middle;
+  perspective: 5px;
+  perspective-origin: 50% 50%;
+}
+.scene .wrap {
+  position: absolute;
+  width: 1200px;
+  height: 100vh;
+  left: -600px;
+  top: -600px;
+  transform-style: preserve-3d;
+  animation: move 15s infinite linear forwards;
+}
+.scene .wrap:nth-child(2) {
+  animation: move 12s infinite linear;
+  animation-delay: 6s;
+}
+.scene .wrap:nth-child(2) .wall {
+  animation-delay: 6s;
+}
+.scene .wall {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/img/universe3.jpg);
+  background-size: cover;
+  opacity: 0;
+  animation: fade 16s infinite linear;
+  animation-delay: 1s;
+}
+.scene .wall-right {
+  transform: rotateY(90deg) translateZ(600px);
+}
+.scene .wall-left {
+  transform: rotateY(-90deg) translateZ(600px);
+}
+.scene .wall-top {
+  transform: rotateX(90deg) translateZ(600px);
+}
+.scene .wall-bottom {
+  transform: rotateX(-90deg) translateZ(600px);
+}
+.scene .wall-back {
+  transform: rotateX(180deg) translateZ(600px);
+}
+
+@keyframes move {
+  0% {
+    transform: translateZ(-600px) rotate(0deg);
+  }
+  100% {
+    transform: translateZ(600px) rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    background: url(../../assets/img/universe3.jpg);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.4;
+  }
+  21% {
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 1;
+  }
+  35% {
+    background: url(../../assets/img/universe2.jpg);
+  }
+  65% {
+    background: url(../../assets/img/universe1.jpg);
+  }
+  75% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+    background: url(../../assets/img/universe3.jpg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
